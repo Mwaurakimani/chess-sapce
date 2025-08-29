@@ -1,0 +1,80 @@
+// -------------------------------------
+// Base Theme Tokens: ChessCyber Theme
+// -------------------------------------
+
+:root {
+    --bg-main: #0d0d0d;
+    --text-main: #eaeaea;
+    --text-muted: #999;
+    --accent-orange: #ff914d;
+    --accent-orange-hover: #ff7f2e;
+    --accent-green: #90ee90;
+    --accent-lime: #bfff00;
+    --accent-baby-blue: #2fb0ec;
+    --accent-red: #ff6f61;
+    --card-bg: #1a1a1a;
+    --border-light: #2a2a2a;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --transition-fast: 0.2s ease;
+    --font-main: 'Inter', sans-serif;
+}
+
+// -------------------------------------
+// Base Reset
+// -------------------------------------
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-main);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border: none;
+    background: none;
+}
+
+// -------------------------------------
+// Utility Classes (for manual use)
+// -------------------------------------
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: var(--transition-fast);
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-orange {
+    background-color: var(--accent-orange);
+    color: #0d0d0d;
+
+    &:hover {
+        background-color: var(--accent-orange-hover);
+    }
+}
+
+.btn-outline-blue {
+    border: 1px solid var(--accent-baby-blue);
+    color: var(--accent-baby-blue);
+    background: transparent;
+
+    &:hover {
+        background: var(--accent-baby-blue);
+        color: #0d0d0d;
+    }
+}
