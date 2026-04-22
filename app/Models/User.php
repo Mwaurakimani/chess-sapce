@@ -21,6 +21,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
+        'password',
+        'balance',
+        'tokens',
+        'currency',
+        'chess_com_username',
+        'lichess_username',
+        'meta',
+        'remember_token',
     ];
 
     /**

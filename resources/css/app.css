@@ -165,3 +165,50 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Background scene (purple grid gradient) */
+:root {
+    --bg-grad: radial-gradient(1200px 600px at -10% -20%, #3b1a7a33 0%, transparent 50%),
+    radial-gradient(1000px 500px at 110% 120%, #2c167633 0%, transparent 55%),
+    linear-gradient(180deg, #1a1135 0%, #0f0b1d 100%);
+}
+
+/* Glass/panel/controls */
+@layer components {
+    .app-bg {
+        @apply min-h-screen text-brand-text;
+        background: var(--bg-grad);
+    }
+
+    .panel {
+        @apply rounded-xl2 border border-brand-outline bg-brand-surface2/80 shadow-glass backdrop-blur-12;
+    }
+
+    .glass {
+        @apply rounded-xl2 border border-brand-outline/70 bg-white/5 shadow-glass backdrop-blur-12;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold transition;
+    }
+    .btn-primary {
+        @apply bg-brand-purple text-white hover:bg-brand-purple/90 shadow-sm;
+    }
+    .btn-ghost {
+        @apply border border-brand-outline text-brand-text hover:bg-white/5;
+    }
+    .icon-btn {
+        @apply inline-flex h-10 w-10 items-center justify-center rounded-xl border border-brand-outline bg-brand-surface hover:bg-white/5;
+    }
+
+    .badge {
+        @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs;
+    }
+    .badge-live { @apply bg-brand-red/20 text-brand-red border border-brand-red/30; }
+    .badge-win  { @apply bg-brand-lime/20 text-brand-lime border border-brand-lime/30; }
+
+    .input {
+        @apply w-full rounded-xl border border-brand-outline bg-black/40 px-3 py-2 text-brand-text outline-none
+        focus:border-brand-purple focus:shadow-glow;
+    }
+}

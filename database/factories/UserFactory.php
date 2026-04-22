@@ -34,10 +34,10 @@ class UserFactory extends Factory
             'currency' => 'KES',
             'chess_com_username' => $this->faker->userName,
             'lichess_username' => $this->faker->userName,
-            'meta' => [
-                'vibes' => 'immaculate',
-                'favorite_opening' => 'Queen\'s Gambit',
-            ],
+            'meta' => json_encode([
+                    'vibes' => 'immaculate',
+                    'favorite_opening' => 'Queen\'s Gambit',
+                ]),
             'remember_token' => Str::random(10),
         ];
     }
